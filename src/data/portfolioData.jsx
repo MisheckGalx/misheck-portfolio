@@ -22,7 +22,7 @@ export const portfolioData = {
         social: {
             email: "mailto:misheckgogo45@gmail.com",
             github: "https://github.com/MisheckGalx",
-            linkedin: "https://www.linkedin.com/in/misheck-gogo/",
+            linkedin: "https://www.linkedin.com/in/misheckgogo/",
             X: "https://x.com/kingboris28"
         },
         location: "South Africa",
