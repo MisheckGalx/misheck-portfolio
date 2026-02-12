@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import About from './components/About'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
@@ -6,6 +7,22 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window === 'undefined') return false
+    const stored = localStorage.getItem('darkMode')
+    if (stored !== null) return stored === 'true'
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+  })
+
+  useEffect(() => {
+    localStorage.setItem('darkMode', darkMode)
+    if (darkMode) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [darkMode])
+
   return (
     <div className="relative min-h-screen bg-white dark:bg-[#000000] text-black dark:text-white transition-colors duration-300">
 
@@ -18,7 +35,7 @@ function App() {
       />
 
       <main className="relative z-10">
-        <About />
+        <About darkMode={darkMode} setDarkMode={setDarkMode} />
         <Experience />
         <Projects />
         <Skills />
