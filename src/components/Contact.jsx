@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import { portfolioData } from '../data/portfolioData.jsx'
 import { FiArrowUpRight, FiMail } from 'react-icons/fi'
-import { FaWhatsapp } from 'react-icons/fa'
+import { FaWhatsapp, FaFileDownload } from 'react-icons/fa'
 import { slideInFromBottom, fadeIn } from '../utils/animations'
 
 const Contact = () => {
@@ -38,6 +38,16 @@ const Contact = () => {
               <FaWhatsapp size={18} />
               <span>Chat on WhatsApp</span>
               <FiArrowUpRight className="opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+            <a onClick={() => {
+              const link = document.createElement('a')
+              link.href = '/files/Misheck_Gogo_CV.pdf'
+              link.download = 'Misheck_Gogo_CV.pdf'
+              document.body.appendChild(link)
+              link.click()
+              document.body.removeChild(link)
+             }} className="w-full sm:w-auto flex items-center justify-center gap-3 px-10 py-4 bg-gray-800 hover:bg-gray-700 dark:bg-gray-200 dark:hover:bg-gray-300 text-white dark:text-black rounded-2xl font-bold text-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl active:scale-95 cursor-pointer">
+              <FaFileDownload size={18} />
+              <span>Download CV</span>
             </a>
           </div>
         </div>
