@@ -1,4 +1,3 @@
-cat > src/components/Projects.jsx << 'ENDFILE'
 import { useEffect, useRef } from 'react'
 import { portfolioData } from '../data/portfolioData.jsx'
 import { staggerFade, slideInFromBottom } from '../utils/animations'
@@ -25,17 +24,9 @@ const Projects = () => {
       <h2 ref={headingRef} className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 sm:mb-12 opacity-0">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
         {portfolioData.projects.map((project, index) => (
-          <div
-            key={project.id}
-            ref={(el) => (cardsRef.current[index] = el)}
-            className="bg-white/50 dark:bg-black/50 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden hover:border-gray-300 dark:hover:border-white/20 transition-all group opacity-0"
-          >
+          <div key={project.id} ref={(el) => (cardsRef.current[index] = el)} className="bg-white/50 dark:bg-black/50 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden hover:border-gray-300 dark:hover:border-white/20 transition-all group opacity-0">
             <div className="relative h-48 overflow-hidden">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
+              <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">{project.title}</h3>
@@ -66,4 +57,3 @@ const Projects = () => {
 }
 
 export default Projects
-ENDFILE

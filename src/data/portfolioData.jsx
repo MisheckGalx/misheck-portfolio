@@ -1,4 +1,3 @@
-cat > src/data/portfolioData.jsx << 'EOF'
 import {
     SiHtml5,
     SiCss3,
@@ -12,7 +11,6 @@ import {
     SiGit,
     SiGithub,
     SiTailwindcss,
-    SiAmazonaws
 } from "react-icons/si";
 
 export const portfolioData = {
@@ -78,10 +76,9 @@ export const portfolioData = {
         { name: "Node.js", icon: <SiNodedotjs className="text-green-600 dark:text-green-500" />, color: "green" },
         { name: "Express.js", icon: <SiExpress className="text-gray-900 dark:text-white" />, color: "white" },
         { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600 dark:text-blue-400" />, color: "blue" },
-        { name: "AWS Cloud", icon: <SiAmazonaws className="text-orange-600" />, color: "orange" },
+        { name: "AWS Cloud", icon: <span className="text-orange-600 text-lg">☁️</span>, color: "orange" },
         { name: "Git", icon: <SiGit className="text-orange-600" />, color: "orange" },
         { name: "GitHub", icon: <SiGithub className="text-gray-900 dark:text-white" />, color: "black" },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-500 dark:text-teal-400" />, color: "teal" },
     ],
 }
-EOF

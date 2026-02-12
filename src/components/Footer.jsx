@@ -1,4 +1,3 @@
-cat > src/components/Footer.jsx << 'ENDFILE'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { portfolioData } from '../data/portfolioData.jsx'
 
@@ -41,4 +40,3 @@ const Footer = () => {
 }
 
 export default Footer
-ENDFILE

@@ -1,4 +1,3 @@
-cat > src/components/Contact.jsx << 'ENDFILE'
 import React, { useRef, useEffect } from 'react'
 import { portfolioData } from '../data/portfolioData.jsx'
 import { FiArrowUpRight, FiMail } from 'react-icons/fi'
@@ -48,4 +47,3 @@ const Contact = () => {
 }
 
 export default Contact
-ENDFILE

@@ -1,4 +1,3 @@
-cat > src/utils/animations.js << 'EOF'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -76,4 +75,3 @@ export const slideInFromBottom = (element, delay = 0) => {
     }
   )
 }
-EOF
