@@ -58,14 +58,9 @@ const About = () => {
     }
   }
 
-  const downloadCV = () => {
-    const cvUrl = '/Misheck_Gogo_CV.pdf'
-    const link = document.createElement('a')
-    link.href = cvUrl
-    link.download = 'Misheck_Gogo_CV.pdf'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+  const viewCV = () => {
+    const cvUrl = '/files/Misheck_Gogo_CV.pdf'
+    window.open(cvUrl, '_blank')
   }
 
   return (
@@ -78,7 +73,7 @@ const About = () => {
                 {item}
               </a>
             ))}
-            <button onClick={downloadCV} className="text-[10px] uppercase tracking-[0.3em] font-medium text-gray-400 hover:text-black dark:hover:text-white transition-colors flex items-center gap-2">
+            <button onClick={viewCV} className="text-[10px] uppercase tracking-[0.3em] font-medium text-gray-400 hover:text-black dark:hover:text-white transition-colors flex items-center gap-2">
               <FaFileDownload size={12} /> CV
             </button>
           </div>
@@ -87,6 +82,7 @@ const About = () => {
           </button>
         </div>
       </nav>
+
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 md:pt-48 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
           <div className="md:col-span-2">
@@ -108,10 +104,12 @@ const About = () => {
                   <span>{portfolioData.personal.roles[1]}</span>
                 </div>
               </div>
+
               <div ref={socialRef} className="flex flex-wrap items-center gap-4 sm:gap-6 text-xl opacity-0">
                 <a href={portfolioData.personal.social.email} className="text-[#EA4335] hover:text-[#EA4335] transition-colors"><SiGmail /></a>
                 <a href={portfolioData.personal.social.github} target="_blank" rel="noreferrer" className="text-black dark:text-white hover:opacity-80 transition-opacity"><FaGithub /></a>
                 <a href={portfolioData.personal.social.linkedin} target="_blank" rel="noreferrer" className="text-[#0A66C2] hover:text-[#0A66C2] transition-colors"><FaLinkedin /></a>
+                <a href={portfolioData.personal.social.twitter} target="_blank" rel="noreferrer" className="text-[#1DA1F2] hover:text-[#1DA1F2] transition-colors text-2xl">𝕏</a>
                 <a href={portfolioData.personal.social.whatsapp} target="_blank" rel="noreferrer" className="text-[#25D366] hover:text-[#25D366] transition-colors text-2xl">💬</a>
                 <div className="inline-flex items-center gap-3 px-3 py-1.5 bg-gray-400/5 dark:bg-white/[0.03] border border-black/5 dark:border-white/5 rounded-full transition-all duration-300 hover:bg-gray-400/10 dark:hover:bg-white/[0.06] whitespace-nowrap shrink-0">
                   <span className="relative flex h-2 w-2">
@@ -122,15 +120,17 @@ const About = () => {
                 </div>
               </div>
             </div>
+
             <div className="mt-12 md:mt-16">
               <h2 ref={aboutHeadingRef} className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 sm:mb-8 opacity-0">About</h2>
               <p ref={aboutTextRef} className="text-gray-600 dark:text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl opacity-0">{portfolioData.personal.about}</p>
             </div>
           </div>
+
           <div className="md:col-span-1 flex justify-center md:justify-end pt-8 md:pt-0">
             <div ref={profileImageRef} className="relative opacity-0">
               <div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-black dark:border-white/20 shadow-2xl">
-                <img src="https://via.placeholder.com/300/667eea/ffffff?text=Misheck+Gogo" alt="Misheck Gogo" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                <img src={portfolioData.personal.profileImage || "https://via.placeholder.com/300/667eea/ffffff?text=Misheck"} alt="Misheck Gogo" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
               </div>
               <div className="absolute -inset-4 border-2 border-black/10 dark:border-white/10 rounded-full"></div>
               <div className="absolute -inset-8 border border-black/5 dark:border-white/5 rounded-full"></div>

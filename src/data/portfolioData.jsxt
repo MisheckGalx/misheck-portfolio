@@ -17,7 +17,7 @@ export const portfolioData = {
     personal: {
         name: "Misheck Gogo",
         roles: ["Software Engineer", "Cloud Architech"],
-        profileImage: "/images/profile.jpg",
+        profileImages:"/images/profile.jpg",
         about: "I'm a results driven Full Stack Software Engineer passionate about building robust, scalable, and high performance applications. I specialize in Python, React.js, and designing RESTful APIs, with a strong focus on backend architecture, cloud technologies, and delivering seamless user experiences. My experience includes API development, database design, cloud platforms, and modern web technologies",
         social: {
             email: "mailto:misheckgogo45@gmail.com",
@@ -43,7 +43,7 @@ export const portfolioData = {
             id: 1,
             title: "CoinTrack - Personal Finance Tracker",
             description: "A personal finance tracker for managing income and expenses with transaction tracking, spending categorization, and data visualization.",
-            image: "/images/cointrack.jpg",
+            image: "/images/cointrack.jpg"
             liveUrl: "https://github.com/MisheckGalx",
             githubUrl: "https://github.com/MisheckGalx",
             technologies: ["Flask", "Python", "Bootstrap", "SQLite", "OOP"]
