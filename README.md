@@ -31,35 +31,6 @@ A modern, fully responsive portfolio website built with React, Tailwind CSS, and
 
 ---
 
-##  What's Included
-
-```
-portfolio/
-├── src/
-│   ├── components/
-│   │   ├── About.jsx         # Hero section with CV & profile
-│   │   ├── Contact.jsx       # Contact section with buttons
-│   │   ├── Experience.jsx    # Work experience timeline
-│   │   ├── Projects.jsx      # Project showcase grid
-│   │   ├── Skills.jsx        # Skills display
-│   │   └── Footer.jsx        # Footer with socials
-│   ├── data/
-│   │   └── portfolioData.jsx  # All portfolio content
-│   ├── utils/
-│   │   └── animations.js     # GSAP animation helpers
-│   ├── App.jsx              # Main app component
-│   ├── index.css            # Global styles
-│   └── main.jsx             # Entry point
-├── index.html               # HTML template
-├── tailwind.config.js       # Tailwind configuration
-├── vite.config.js          # Vite configuration
-├── postcss.config.js       # PostCSS configuration
-├── package.json            # Project dependencies
-├── SETUP_GUIDE.md          # Detailed setup instructions
-├── QUICK_START.md          # Quick start guide
-└── README.md               # This file
-```
-
 ---
 
 ##  Quick Start
