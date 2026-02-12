@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *:not(.disable-transitions *),
+  *::before:not(.disable-transitions *),
+  *::after:not(.disable-transitions *) {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {                            
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif !important;
+  }
+}
+
+@layer utilities {
+  .disable-transitions,
+  .disable-transitions * {
+    transition: none !important;
+  }
+}
