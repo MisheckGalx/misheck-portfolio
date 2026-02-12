@@ -50,7 +50,7 @@ const downloadCV = () => {
               </a>
             ))}
             <button onClick={viewCV} className="text-[10px] uppercase tracking-[0.3em] font-medium text-gray-400 hover:text-black dark:hover:text-white transition-colors flex items-center gap-2" title="View CV">
-              <FaFileDownload size={12} /> View
+              <FaFileDownload size={12} /> View CV
             </button>
           </div>
           <button onClick={handleToggleTheme} className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xl">
