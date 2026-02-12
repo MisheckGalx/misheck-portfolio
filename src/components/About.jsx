@@ -27,8 +27,17 @@ const About = ({ darkMode, toggleDarkMode }) => {
   }
 
   const viewCV = () => {
-    window.open('/files/Misheck_Gogo_CV.pdf', '_blank')
-  }
+  window.open('/files/Misheck_Gogo_CV.pdf', '_blank')
+}
+
+const downloadCV = () => {
+  const link = document.createElement('a')
+  link.href = '/files/Misheck_Gogo_CV.pdf'
+  link.download = 'Misheck_Gogo_CV.pdf'
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
+}
 
   return (
     <section id="home" className="relative min-h-screen text-[#111111] dark:text-[#f0f0f0] selection:bg-blue-500/20 transition-colors duration-500 overflow-hidden">
@@ -40,8 +49,8 @@ const About = ({ darkMode, toggleDarkMode }) => {
                 {item}
               </a>
             ))}
-            <button onClick={viewCV} className="text-[10px] uppercase tracking-[0.3em] font-medium text-gray-400 hover:text-black dark:hover:text-white transition-colors flex items-center gap-2">
-              <FaFileDownload size={12} /> CV
+            <button onClick={viewCV} className="text-[10px] uppercase tracking-[0.3em] font-medium text-gray-400 hover:text-black dark:hover:text-white transition-colors flex items-center gap-2" title="View CV">
+              <FaFileDownload size={12} /> View
             </button>
           </div>
           <button onClick={handleToggleTheme} className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xl">
