@@ -8,6 +8,7 @@ import { fadeIn, slideInFromBottom } from '../utils/animations'
 
 const About = () => {
   const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window === 'undefined') return false
     const stored = localStorage.getItem('theme')
     if (stored) return stored === 'dark'
     return window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -39,22 +40,16 @@ const About = () => {
     }
   }, [darkMode])
 
-  const toggleTheme = async () => {
-    if (!document.startViewTransition) {
-      setDarkMode(!darkMode)
-      document.documentElement.classList.toggle('dark')
-      return
-    }
-    document.documentElement.classList.add('disable-transitions')
-    try {
-      await document.startViewTransition(() => {
-        flushSync(() => {
-          setDarkMode(!darkMode)
-          document.documentElement.classList.toggle('dark')
-        })
-      }).finished
-    } finally {
-      document.documentElement.classList.remove('disable-transitions')
+  const toggleTheme = () => {
+    const newDarkMode = !darkMode
+    setDarkMode(newDarkMode)
+    
+    if (newDarkMode) {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
     }
   }
 
@@ -106,11 +101,10 @@ const About = () => {
               </div>
 
               <div ref={socialRef} className="flex flex-wrap items-center gap-4 sm:gap-6 text-xl opacity-0">
-                <a href={portfolioData.personal.social.email} className="text-[#EA4335] hover:text-[#EA4335] transition-colors"><SiGmail /></a>
-                <a href={portfolioData.personal.social.github} target="_blank" rel="noreferrer" className="text-black dark:text-white hover:opacity-80 transition-opacity"><FaGithub /></a>
-                <a href={portfolioData.personal.social.linkedin} target="_blank" rel="noreferrer" className="text-[#0A66C2] hover:text-[#0A66C2] transition-colors"><FaLinkedin /></a>
-                <a href={portfolioData.personal.social.twitter} target="_blank" rel="noreferrer" className="text-[#1DA1F2] hover:text-[#1DA1F2] transition-colors text-2xl">𝕏</a>
-                <a href={portfolioData.personal.social.whatsapp} target="_blank" rel="noreferrer" className="text-[#25D366] hover:text-[#25D366] transition-colors text-2xl">💬</a>
+                <a href={portfolioData.personal.social.email} className="text-[#EA4335] hover:text-[#EA4335] transition-colors" title="Email"><SiGmail /></a>
+                <a href={portfolioData.personal.social.github} target="_blank" rel="noreferrer" className="text-black dark:text-white hover:opacity-80 transition-opacity" title="GitHub"><FaGithub /></a>
+                <a href={portfolioData.personal.social.linkedin} target="_blank" rel="noreferrer" className="text-[#0A66C2] hover:text-[#0A66C2] transition-colors" title="LinkedIn"><FaLinkedin /></a>
+                <a href={portfolioData.personal.social.X} target="_blank" rel="noreferrer" className="text-[#1DA1F2] hover:text-[#1DA1F2] transition-colors text-2xl" title="Twitter">𝕏</a>
                 <div className="inline-flex items-center gap-3 px-3 py-1.5 bg-gray-400/5 dark:bg-white/[0.03] border border-black/5 dark:border-white/5 rounded-full transition-all duration-300 hover:bg-gray-400/10 dark:hover:bg-white/[0.06] whitespace-nowrap shrink-0">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-40"></span>
