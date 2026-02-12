@@ -62,7 +62,7 @@ export const portfolioData = {
             title: "SDA Website Project",
             description: "Designed and developed a professional website for the SDA organization to improve online presence and community engagement.",
             image: "/images/sda.jpg",
-            liveUrl: "https://github.com/MisheckGalx",
+            liveUrl: "https://clayvillegardens.pythonanywhere.com/",
             githubUrl: "https://github.com/MisheckGalx",
             technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"]
         },
