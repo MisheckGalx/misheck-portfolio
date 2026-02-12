@@ -1,4 +1,4 @@
-#🎨 Misheck Gogo - Professional Portfolio Website
+## 🎨 Misheck Gogo - Professional Portfolio Website
 
 A modern, fully responsive portfolio website built with React, Tailwind CSS, and GSAP animations. Features dark mode, CV download, profile picture, WhatsApp integration, and smooth scroll animations.
 
