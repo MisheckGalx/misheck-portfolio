@@ -2,7 +2,7 @@
 
 A modern, fully responsive portfolio website built with React, Tailwind CSS, and GSAP animations. Features dark mode, CV download, profile picture, WhatsApp integration, and smooth scroll animations.
 
-![Portfolio Preview](https://misheck-gogo.netlify.app/)
+![Portfolio https://misheck-gogo.netlify.app/
 
 ---
 
