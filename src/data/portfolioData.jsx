@@ -16,7 +16,7 @@ import {
 export const portfolioData = {
     personal: {
         name: "Misheck Gogo",
-        roles: ["Software Engineer", "Cloud Architech"],
+        roles: ["Software Engineer", "Cloud Architect"],
         profileImage: "/images/profile.jpg",
         about: "I'm a results driven Full Stack Software Engineer passionate about building robust, scalable, and high performance applications. I specialize in Python, React.js, and designing RESTful APIs, with a strong focus on backend architecture, cloud technologies, and delivering seamless user experiences. My experience includes API development, database design, cloud platforms, and modern web technologies",
         social: {
