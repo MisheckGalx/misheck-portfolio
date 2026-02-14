@@ -1,4 +1,4 @@
-Loimport React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { portfolioData } from '../data/portfolioData.jsx'
 import { FaGithub, FaLinkedin, FaFileDownload } from 'react-icons/fa'
 import { FiSun, FiMoon } from 'react-icons/fi'
@@ -65,7 +65,7 @@ const downloadCV = () => {
             <div className="flex flex-col items-start text-left mb-20 space-y-8">
               <div>
                 <h1 className="text-5xl md:text-8xl font-bold tracking-tighter text-black dark:text-white leading-none">
-                  <span ref={headingRef} className="inline-block opacity-0">Hey I'm <span className="relative inline-block ml-1 md:ml-2">
+                  <span ref={headingRef} className="inline-block opacity-0">Hi, I'm <span className="relative inline-block ml-1 md:ml-2">
                     <span className="relative z-10 text-white dark:text-black px-1 md:px-2">Misheck</span>
                     <span className="absolute inset-0 bg-black dark:bg-white -rotate-1 md:-rotate-2 z-0"></span>
                   </span></span>
