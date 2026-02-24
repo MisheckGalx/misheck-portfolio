@@ -53,7 +53,7 @@ export const portfolioData = {
             title: "Mmanda's Sauce - E-commerce Platform",
             description: "A fully functional e-commerce web application to showcase and sell Mmanda's Sauce products online with shopping cart and order management.",
             image: "/images/mmandas.jpg",
-            liveUrl: "https://github.com/MisheckGalx",
+            liveUrl: "https://mmandassauces.netlify.app/",
             githubUrl: "https://github.com/MisheckGalx",
             technologies: ["Flask", "Python", "HTML", "CSS", "Bootstrap"]
         },
