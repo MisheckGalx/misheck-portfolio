@@ -82,6 +82,24 @@ export const portfolioData = {
             githubUrl: "https://github.com/MisheckGalx/Eland-expert-engineers",
             technologies: ["Node.js", "Express", "SQLite", "HTML", "CSS"]
         },
+        {
+            id: 5,
+            title: "Mmanda's Sauce - E-commerce Platform",
+            description: "A fully functional e-commerce web application to showcase and sell Mmanda's Sauce products online with shopping cart and order management.",
+            image: "/images/mmandas.jpg",
+            liveUrl: "https://mmandassauces.netlify.app/",
+            githubUrl: "https://github.com/MisheckGalx/Mmanda-s-Sauces",
+            technologies: ["Flask", "Python", "HTML", "CSS", "Bootstrap"]
+        },
+        {
+            id: 6,
+            title: "SDA Website Project",
+            description: "Designed and developed a professional website for the SDA organization to improve online presence and community engagement.",
+            image: "/images/sda.jpg",
+            liveUrl: "https://clayvillegardenssdachurch.onrender.com/",
+            githubUrl: "https://github.com/MisheckGalx/Clayville-Gardens-SDA-Church-Website",
+            technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"]
+        },
     ],
     skills: [
         { name: "Python", icon: <SiPython className="text-blue-500 dark:text-blue-400" />, color: "blue" },
