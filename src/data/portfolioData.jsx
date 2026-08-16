@@ -40,8 +40,8 @@ export const portfolioData = {
             company: "Chicken Licken",
             role: "Assistant Manager",
             logo: "/images/chicken-licken.jpg",
-            startDate: "2022",
-            endDate: "2026",
+            startDate: "Oct 2021",
+            endDate: "Feb 2026",
             description: "Oversee daily restaurant operations ensuring smooth and efficient workflow across all departments. Manage and mentor staff, maintaining high standards in service quality and team performance. Ensure consistent customer satisfaction by implementing company policies and resolving issues promptly."
         }
     ],
