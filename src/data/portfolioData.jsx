@@ -18,7 +18,7 @@ export const portfolioData = {
         name: "Misheck Gogo",
         roles: ["Backend Engineer", "Solutions Architect"],
         profileImage: "/images/profile.jpg",
-        about: "I'm a backend engineer moving deliberately into cloud solutions architecture. My foundation is Python and RESTful API design, and I'm actively building on that with Java and hands-on AWS work, designing serverless systems, secure IAM boundaries, automated compliance pipelines, and infrastructure that scales without babysitting. I like architecting systems as much as I like coding them, whether that's a presigned-URL upload pattern, a Lambda-driven remediation pipeline, or a serverless REST API built from scratch on API Gateway and DynamoDB. I learn by building real, working systems end to end, not just studying the diagrams.",
+        about: "I'm a backend engineer moving deliberately into cloud solutions architecture. My foundation is Python and RESTful API design, and I'm actively building on that with Java and hands on AWS work, designing serverless systems, secure IAM boundaries, automated compliance pipelines, and infrastructure that scales without babysitting. I like architecting systems as much as I like coding them, whether that's a presigned URL upload pattern, a Lambda driven remediation pipeline, or a serverless REST API built from scratch on API Gateway and DynamoDB. I learn by building real, working systems end to end, not just studying the diagrams.",
         social: {
             email: "mailto:misheckgogo45@gmail.com",
             github: "https://github.com/MisheckGalx",
