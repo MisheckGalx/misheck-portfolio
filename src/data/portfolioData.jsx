@@ -16,19 +16,26 @@ import {
 export const portfolioData = {
     personal: {
         name: "Misheck Gogo",
-        roles: ["Software Engineer", "Cloud Architect"],
+        roles: ["Backend Engineer", "Solutions Architect"],
         profileImage: "/images/profile.jpg",
-        about: "I'm a results driven Full Stack Software Engineer passionate about building robust, scalable, and high performance applications. I specialize in Python, React.js, and designing RESTful APIs, with a strong focus on backend architecture, cloud technologies, and delivering seamless user experiences. My experience includes API development, database design, cloud platforms, and modern web technologies",
+        about: "I'm a backend engineer moving deliberately into cloud solutions architecture. My foundation is Python and RESTful API design, and I'm actively building on that with Java and hands-on AWS work, designing serverless systems, secure IAM boundaries, automated compliance pipelines, and infrastructure that scales without babysitting. I like architecting systems as much as I like coding them, whether that's a presigned-URL upload pattern, a Lambda-driven remediation pipeline, or a serverless REST API built from scratch on API Gateway and DynamoDB. I learn by building real, working systems end to end, not just studying the diagrams.",
         social: {
             email: "mailto:misheckgogo45@gmail.com",
             github: "https://github.com/MisheckGalx",
             linkedin: "https://linkedin.com/in/misheckgogo/",
-            X: "https://x.com/kingboris28"
         },
         location: "South Africa",
         phone: "+27 680 970 160"
     },
     workExperience: [
+        {
+            company: "Duck Framework",
+            role: "Web Developer",
+            logo: "/images/duck-icon.jpg",
+            startDate: "Feb 2026",
+            endDate: "Present",
+            description: "Working on software development and software design as part of the team, contributing to building and maintaining web applications and delivering clean, functional code."
+        },
         {
             company: "Chicken Licken",
             role: "Assistant Manager",
@@ -41,30 +48,39 @@ export const portfolioData = {
     projects: [
         {
             id: 1,
-            title: "CoinTrack - Personal Finance Tracker",
-            description: "A personal finance tracker for managing income and expenses with transaction tracking, spending categorization, and data visualization.",
-            image: "/images/cointrack.jpg",
-            liveUrl: "https://github.com/MisheckGalx",
-            githubUrl: "https://github.com/MisheckGalx",
-            technologies: ["Flask", "Python", "Bootstrap", "SQLite", "OOP"]
+            title: "DropForge - Secure S3 Presigned Upload Pattern",
+            description: "A FastAPI backend and browser frontend implementing direct-to-S3 uploads via short-lived presigned URLs, with a locked-down IAM identity, private bucket, and least-privilege access policy.",
+            image: "/images/dropforge.png",
+            liveUrl: "https://github.com/MisheckGalx/dropforge",
+            githubUrl: "https://github.com/MisheckGalx/dropforge",
+            technologies: ["AWS S3", "IAM", "FastAPI", "Python", "CORS"]
         },
         {
             id: 2,
-            title: "Mmanda's Sauce - E-commerce Platform",
-            description: "A fully functional e-commerce web application to showcase and sell Mmanda's Sauce products online with shopping cart and order management.",
-            image: "/images/mmandas.jpg",
-            liveUrl: "https://mmandassauces.netlify.app/",
-            githubUrl: "https://github.com/MisheckGalx",
-            technologies: ["Flask", "Python", "HTML", "CSS", "Bootstrap"]
+            title: "AWS Task Manager - Serverless REST API",
+            description: "A serverless task management REST API built on API Gateway, Lambda, and DynamoDB, deployed end-to-end with CloudFormation and scoped per-function IAM roles.",
+            image: "/images/aws-task-manager.png",
+            liveUrl: "https://github.com/MisheckGalx/aws-task-manager",
+            githubUrl: "https://github.com/MisheckGalx/aws-task-manager",
+            technologies: ["AWS Lambda", "API Gateway", "DynamoDB", "CloudFormation", "Python"]
         },
         {
             id: 3,
-            title: "SDA Website Project",
-            description: "Designed and developed a professional website for the SDA organization to improve online presence and community engagement.",
-            image: "/images/sda.jpg",
-            liveUrl: "https://clayvillegardenssdachurch.onrender.com/",
-            githubUrl: "https://github.com/MisheckGalx",
-            technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"]
+            title: "AWS Healthcare Compliance & Automated Remediation",
+            description: "A serverless compliance pipeline that continuously watches S3 buckets for public-access violations, alerts via SNS, and auto-remediates with Lambda, with a full CloudTrail audit trail.",
+            image: "/images/aws-healthcare-compliance-platform.png",
+            liveUrl: "https://github.com/MisheckGalx/aws-healthcare-compliance-platform",
+            githubUrl: "https://github.com/MisheckGalx/aws-healthcare-compliance-platform",
+            technologies: ["AWS Config", "EventBridge", "Lambda", "SNS", "CloudTrail"]
+        },
+        {
+            id: 4,
+            title: "Eland Expert Engineers - Corporate Website",
+            description: "A professional corporate website for an Electrical & Instrumentation engineering firm, covering power generation, water treatment, mining, and industrial automation services.",
+            image: "/images/eland-expert-engineers.png",
+            liveUrl: "https://github.com/MisheckGalx/Eland-expert-engineers",
+            githubUrl: "https://github.com/MisheckGalx/Eland-expert-engineers",
+            technologies: ["Node.js", "Express", "SQLite", "HTML", "CSS"]
         },
     ],
     skills: [
